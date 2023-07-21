@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bglight: #f7f8fb;
+  --bgDark: linear-gradient(223deg, #17181a 0%, #17181a 100%);
+  --displayDark: #818181;
+  --displayDarkVisor: #fff;
+  --colorTeclado: #29a8ff;
+}
+body {
+  background-color: #daf0ff;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Poppins, sans-serif;
+  flex-direction: column;
+}
+.containerCalc {
+  width: 375px;
+  height: 812px;
+  border-radius: 39px;
+  padding: 33px;
+  background: var(--bgDark);
+}
+.display {
+  background-color: #212224;
+}
+.display #expression {
+  color: #818181;
+  font-size: 24px;
+  color: var(--displayDark);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  margin-top: 138px;
+}
+.display #result {
+  color: var(--displayDarkVisor);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  justify-content: right;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.keyboard button {
+  margin-top: 10px;
+  display: flex;
+  width: 62px;
+  height: 62px;
+  font-size: 24px;
+  padding: 6px 4px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: none;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transition: transform 0.5s;
+}
+.keyboard button:active {
+  opacity: 60%;
+}
+.keyboard button:hover {
+  transform: scale(1.1);
+}
+.btnZero {
+  width: 144px !important;
+  grid-column: span 2;
+}
+.btnIgual {
+  background: #005db2;
+  color: #29a8ff;
+  height: 144px !important;
+  grid-row: span 2;
+}
+.clear,
+.back {
+  color: #a5a5a5 !important;
+  background: #616161;
+}
+.btnOp {
+  background: #005db2;
+  color: #29a8ff;
+}
+.btnNum {
+  background: #303136;
+  color: #29a8ff;
+}
